@@ -18,7 +18,7 @@ interface SoftwareCamera {
   maxLightLevel: number;
 }
 
-function isCompatibleSoftwareCamera(softwareCamera: SoftwareCamera, hardwareCameras: HardwareCamera[]): boolean {
+export function isCompatibleSoftwareCamera(softwareCamera: SoftwareCamera, hardwareCameras: HardwareCamera[]): boolean {
   // For each range of the software camera (distance and light level),
   // we need at least one hardware camera that can cover it.
   const canCoverDistance = hardwareCameras.some(
